@@ -10,3 +10,8 @@ function playRandomVideo() {
   videoPlayer.src = nextVideo;
   videoPlayer.play();
 }
+// Play one at start
+playRandomVideo();
+
+// When video ends, play another random one
+videoPlayer.addEventListener("ended", playRandomVideo);
